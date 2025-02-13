@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-# Включаем кросс-компиляцию для совместимости с Alpine
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o tracker
 
 FROM alpine:latest
